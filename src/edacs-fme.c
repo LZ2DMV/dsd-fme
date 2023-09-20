@@ -628,10 +628,10 @@ void edacs(dsd_opts * opts, dsd_state * state)
           fprintf (stderr, " Digital");
 
         //skip analog calls on RTL Input on ARM devices due to High CPU usage from RTL RMS function
-        #ifdef __arm__
-        if (command == 0xEE && opts->audio_in_type == 3)
-          goto ENDPV;
-        #endif
+        // #ifdef __arm__
+        // if (command == 0xEE && opts->audio_in_type == 3)
+        //   goto ENDPV;
+        // #endif
 
         //this is working now with the new import setup
         if (opts->p25_trunk == 1 && (strcmp(mode, "DE") != 0) && (strcmp(mode, "B") != 0) ) //DE is digital encrypted, B is block
