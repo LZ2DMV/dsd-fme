@@ -40,9 +40,9 @@ cd ..
 cd ..
 
 git clone https://github.com/lwvmobile/dsd-fme
-### For branch v2.1b - git clone --branch v2.1b https://github.com/lwvmobile/dsd-fme
+### For branch audio_work - git clone --branch audio_work https://github.com/lwvmobile/dsd-fme
 cd dsd-fme
-git checkout v2.1b
+# git checkout audio_work #uncomment if you want audio_work branch
 sudo cp tone8.wav /usr/share/
 sudo cp tone24.wav /usr/share/
 sudo cp tone48.wav /usr/share/
@@ -55,7 +55,7 @@ cmake ..
 make -j `nproc`
 sudo make install
 sudo ldconfig
-sudo rm -R dsd-fme
+# sudo rm -R dsd-fme
 
 echo Any issues, Please report to either
 echo https://github.com/lwvmobile/dsd-fme/issues
